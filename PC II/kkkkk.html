@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #202020;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: monospace;
+        }
+        #segue {
+  position: absolute;
+}
+
+        button {
+            align-items: center;
+            margin:0 auto;
+            text-align: center;
+            justify-content: center;
+            font-family: monospace;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você é hetero ou gay?</h1>
+    <center>
+    <button id="foge" style="background-color: rgb(255, 0, 0);">Hetero</button>
+    <button id="segue" style="background-color: rgb(0, 255, 0);">Gay</button>
+    </center>
+
+<script>
+const gay = document.getElementById("segue");
+
+let x = 0, y = 0;
+
+document.addEventListener("mousemove", (e) => {
+x += (e.clientX - x) * 0.1;
+y += (e.clientY - y) * 0.1;
+
+gay.style.left = x + "px";
+gay.style.top = y + "px";
+});
+const btn = document.getElementById("foge");
+
+btn.onmouseover = () => {
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 90 + "%";
+  btn.style.top = Math.random() * 90 + "%";
+};
+</script>
+
+</body>
+</html>
